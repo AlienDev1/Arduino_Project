@@ -29,24 +29,25 @@ void setup()
 // Infinate Loop
 void loop()
 { 
-    int analogValue;
+    float device;
     float temp;
 
     //reads data from sensor
-    analogValue = analogRead(lM35_sensorData);
+    device = analogRead(lM35_sensorData);
 
     //convert the 10bit analog value to celcius
-    temp = float(analogValue) / 1023; //
+    temp = float(device) / 1023; //
     temp = temp * 500;
 
-    // Print Temputure to Screen
+    // Print temputure to console
     Serial.print("Temp: ");
     Serial.print(temp);
     Serial.println(" Celcius");
-    Serial.print(" ");
+
+    //Prints Fahrentheit conversion to console
     Serial.print("Fahrenheit: ");
     Serial.println((temp*1.8)+32);
     
     // Each 1000 milliseconds is the time stamp of 1 second 
-    delay(10000);
+    delay(1000); // reads every 10 second
 }
