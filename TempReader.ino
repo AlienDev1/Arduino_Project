@@ -44,11 +44,10 @@ void loop()
     Serial.print(temp);
     Serial.println(" Celcius");
 
-    
     //Prints Fahrentheit conversion to console
     Serial.print("Fahrenheit: ");
     Serial.println((temp*1.8)+32);
     
     // Each 1000 milliseconds is the time stamp of 1 second 
-    delay(1000);
+    delay(1000); // reads every 10 second
 }
