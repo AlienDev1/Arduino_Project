@@ -29,7 +29,7 @@ void setup()
 // Infinate Loop
 void loop()
 { 
-    int device;
+    float device;
     float temp;
 
     //reads data from sensor
